@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "drizzle:push": "drizzle-kit push",
+    "drizzle:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "drizzle-redis": "workspace:*",
+    "drizzle-orm": "^0.45.1",
+    "ioredis": "^5.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "postgres": "^3.4.8",
+    "drizzle-kit": "^0.31.8"
+  }
+}

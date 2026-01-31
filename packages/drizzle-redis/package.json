@@ -1,0 +1,43 @@
+{
+  "name": "drizzle-redis",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.d.mts",
+        "default": "./build/index.mjs"
+      },
+      "require": {
+        "types": "./build/index.d.cts",
+        "default": "./build/index.cjs"
+      }
+    },
+    "./bun": {
+      "import": {
+        "types": "./build/bun/index.d.mts",
+        "default": "./build/bun/index.mjs"
+      },
+      "require": {
+        "types": "./build/bun/index.d.cts",
+        "default": "./build/bun/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit --incremental false",
+    "build": "tsdown",
+    "dev": "tsdown --watch ./src"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "drizzle-orm": "^0.45.1",
+    "ioredis": "^5.4.2"
+  },
+  "peerDependenciesMeta": {
+    "ioredis": {
+      "optional": true
+    }
+  }
+}

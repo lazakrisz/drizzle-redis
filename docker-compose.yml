@@ -1,0 +1,32 @@
+services:
+  dr-postgres:
+    container_name: dr-postgres
+    image: postgres:17-alpine
+    command: ["postgres", "-c", "log_statement=all"]
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    tmpfs:
+      - /tmp
+      - /var
+    environment:
+      - POSTGRES_DB=database
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    networks:
+      - dr-network
+    volumes:
+      - dr-db-data:/var/lib/postgresql/data/:rw
+  redis:
+    image: redis:8.0-alpine
+    container_name: dr-redis
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    networks:
+      - dr-network
+networks:
+  dr-network:
+
+volumes:
+  dr-db-data:
