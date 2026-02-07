@@ -1,0 +1,26 @@
+drizzle-redis
+Copyright (c) 2026 lazakrisz
+
+This product includes code derived from Drizzle ORM,
+originally developed by the Drizzle Team.
+
+  Drizzle ORM
+  Copyright (c) 2024 Drizzle Team
+  Licensed under the Apache License, Version 2.0
+  https://github.com/drizzle-team/drizzle-orm
+
+Specifically, the Redis Lua scripts used for cache operations in
+src/redis/cache.ts and src/bun/cache.ts are derived from the
+Drizzle ORM cache implementation.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use these files except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

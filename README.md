@@ -148,6 +148,8 @@ await db.$cache.invalidate({ tables: [usersTable] });
 
 Inspired by the [official Drizzle ORM cache interface and Upstash cache implementation](https://github.com/drizzle-team/drizzle-orm/blob/a086f59fba7f46f3a077893ba912c99e91eaa760/drizzle-orm/src/cache/readme.md).
 
+This project includes Lua scripts derived from Drizzle ORM's cache implementation, which is licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0). See [NOTICE](./NOTICE) for details.
+
 ## License
 
 MIT
